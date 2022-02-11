@@ -5,3 +5,4 @@ matplotlib
 Shapely==1.7.1
 reportlab==3.6.2
 streamlit_tags
+scipy

@@ -209,7 +209,7 @@ rev=st.sidebar.text_input("Revison name", key="name2")
 st.sidebar.title("PLAXIS 3D's calculation and extraction options")
 st.sidebar.markdown("*Note: PLAXIS Remote scripting connection is required for any of the options below*")          
 #intro=st.image(r"References\AKT II logo.png")
-intro=st.image(r"https://github.com/marquez85/Geotech/blob/main/References/akt.PNG")
+#intro=st.image(r"https://github.com/marquez85/Geotech/blob/main/References/akt.PNG")
 
 calculation_check=st.sidebar.checkbox('Calculate PLAXIS 3D model before')
 extraction_mode=st.sidebar.checkbox("Extract PLAXIS 3D's Piles results")

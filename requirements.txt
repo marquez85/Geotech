@@ -7,3 +7,4 @@ reportlab==3.6.2
 streamlit_tags
 scipy
 git+https://github.com/marquez85/plxscripting.git
+git+https://github.com/marquez85/encryption.git

@@ -216,7 +216,7 @@ extraction_mode=st.sidebar.checkbox("Extract PLAXIS 3D's Piles results")
 pileplots_all=st.sidebar.checkbox("Create and save Plots for all piles")
 
 if calculation_check or extraction_mode or pileplots_all:
-
+    ip=st.sidebar.text_input("User IP address", key="ip_address")
     password=st.sidebar.text_input("PLAXIS password", key="password",type="password")
     
     
@@ -259,8 +259,8 @@ if calculation_check or extraction_mode or pileplots_all:
                 from plxscripting.easy import *
                 localhostport_input = 10000 
                 localhostport_output = 10001
-                s,g = new_server('localhost', localhostport_input, password=password)
-                s_o,g_o=new_server('localhost', localhostport_output, password=password)
+                s,g = new_server(ip, localhostport_input, password=password)
+                s_o,g_o=new_server(ip, localhostport_output, password=password)
                 
                 g.gotostages()
             

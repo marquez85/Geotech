@@ -257,7 +257,7 @@ if calculation_check or extraction_mode or pileplots_all:
             if calculation_check or extraction_mode:
                 
                 from plxscripting.easy import *
-                localhostport_input = 10000 
+                localhostport_input = 21403 
                 localhostport_output = 10001
                 s,g = new_server(ip, localhostport_input, password=password)
                 s_o,g_o=new_server(ip, localhostport_output, password=password)

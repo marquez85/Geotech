@@ -6,6 +6,6 @@ Shapely==1.7.1
 reportlab==3.6.2
 streamlit_tags
 scipy
-pycrypto==2.6.1
+pycrypto
 git+https://github.com/marquez85/plxscripting.git
 git+https://github.com/marquez85/encryption.git

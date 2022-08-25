@@ -216,11 +216,13 @@ extraction_mode=st.sidebar.checkbox("Extract PLAXIS 3D's Piles results")
 pileplots_all=st.sidebar.checkbox("Create and save Plots for all piles")
 
 if calculation_check or extraction_mode or pileplots_all:
-    ip=st.sidebar.text_input("User IP address", key="ip_address")
+    ip=st.sidebar.text_input("Public IP address of the machine with PLAXIS", key="ip_address")
     password=st.sidebar.text_input("PLAXIS password", key="password",type="password")
-    st.write(ip)
-    st.write(type(ip))
-    st.write(password)
+    localhostport_input=st.sidebar.number_input("Port assigned in PLAXIS Input")
+    localhostport_output=st.sidebar.number_input("Port assigned in PLAXIS Output")
+    # st.write(ip)
+    # st.write(type(ip))
+    # st.write(password)
     
     
     Phase_name_extract = st_tags_sidebar(
@@ -260,8 +262,8 @@ if calculation_check or extraction_mode or pileplots_all:
             if calculation_check or extraction_mode:
                 
                 from plxscripting.easy import *
-                localhostport_input = 21403 
-                localhostport_output = 10001
+                # localhostport_input = 21403
+                # localhostport_output = 10001
                 s,g = new_server(ip, localhostport_input, password=password)
                 s_o,g_o=new_server(ip, localhostport_output, password=password)
                 

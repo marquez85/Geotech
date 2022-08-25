@@ -204,11 +204,12 @@ st.markdown("*Contour generator version - Rev 1*")
 
 st.sidebar.title("Basic project information")
 project_name=st.sidebar.text_input("Project name", key="name")
-rev=st.sidebar.text_input("Revison name", key="name")
+rev=st.sidebar.text_input("Revison name", key="name2")
 
 st.sidebar.title("PLAXIS 3D's calculation and extraction options")
 st.sidebar.markdown("*Note: PLAXIS Remote scripting connection is required for any of the options below*")          
-intro=st.image(r"References\AKT II logo.png")
+#intro=st.image(r"References\AKT II logo.png")
+#intro=st.image(r"https://github.com/marquez85/Geotech/blob/main/References/akt.PNG")
 
 calculation_check=st.sidebar.checkbox('Calculate PLAXIS 3D model before')
 extraction_mode=st.sidebar.checkbox("Extract PLAXIS 3D's Piles results")
@@ -409,7 +410,7 @@ contours_mode=st.sidebar.checkbox("Generate contour Plots")
 if contours_mode:
     poly_ref=st.sidebar.text_input("File name for polygon boundaries", key="polylist")
     intr_disp=st.sidebar.text_input("Countour intervals for displacements (mm)", key="intra_disp")
-    intr_load=st.sidebar.text_input("Countour intervals for loads (kN)", key="intra_disp")          
+    intr_load=st.sidebar.text_input("Countour intervals for loads (kN)", key="intra_disp2")          
     df_pile_head,s_error_c=load_pile_head(project_name,rev)
     df_pilehead_cont=df_pile_head
     if len(project_name) !=0 and len(rev) !=0 and contours_mode and len(poly_ref)!=0 and len(intr_disp)!=0 and len(intr_load)!=0 :

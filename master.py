@@ -219,6 +219,7 @@ if calculation_check or extraction_mode or pileplots_all:
     ip=st.sidebar.text_input("User IP address", key="ip_address")
     password=st.sidebar.text_input("PLAXIS password", key="password",type="password")
     st.write(ip)
+    st.write(type(ip))
     st.write(password)
     
     
